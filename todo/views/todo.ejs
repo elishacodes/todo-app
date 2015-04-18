@@ -8,19 +8,20 @@
   </head>
   <body>
     <h1><%= greeting %></h1>
-    <table class="table">  
-        <thead>  
-          <tr>  
+    <table class="table">
+        <thead>
+          <tr>
             <th>Category</th>
             <th>Description</th>
             <th>Priority</th>
             <th>Due Date</th>
             <th>Remove</th>
-          </tr>  
+            <th>Edit</th>
+          </tr>
 
-     </thead>  
+     </thead>
         <tbody>
-  
+
       <% tasks.forEach(function(task){ %>
     <tr id="row_<%= task._id %>">
       <td><%= task.todo_category %></td>
@@ -28,14 +29,15 @@
       <td><%= task.todo_priority %></td>
       <td><%= task.todo_due_date %></td>
       <td><button class="btn deleteButton" id="<%= task._id %>">Delete</button></td>
-    </tr>  
+      <td><button class="btn editButton" id="<%= task._id %>">Edit</button></td>
+    </tr>
 
       <%  }) %>
 
 </tbody>
 </table>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-          <script src="javascripts/delete.js"></script>
+          <script src="javascripts/todoHandler.js"></script>
   <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 

@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+
+
+
 	$(".deleteButton").click(function(){
 		var thisId=$(this)[0].id;
 		console.log(this.id);
