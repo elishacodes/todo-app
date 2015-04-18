@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div class="col-lg-12">
+      <form class="form-vertical col-lg-12" id="todoNew" method="POST" action="/todo">
+      		<div class="form-group col-lg-12">
+            <label class="control-label col-lg-4" for="todoDueDate">Due Date:</label> 
+            <input class ="col-lg-8" type="date" id="todoDuedate" name="todoDueDate"></input> 
+          </div>
+      		<div class="form-group col-lg-12">
+            <label class="control-label col-lg-4" for="todoCategory">Category:</label>
+            <input class="col-lg-8" type="text" id="todoCategory" name="todoCategory"></input>
+          </div>
+      		<div class="form-group col-lg-12">
+            <label class="control-label col-lg-4">Description:</label> 
+            <textarea class="col-lg-8" type="text" id="todoDescription" name="todoDescription" required></textarea>
+      		</div>
+          <div class="form-group col-lg-12">
+            <label class="control-label col-lg-4">Priority:</label> 
+            <input class="col-lg-8" type="text" id="todoPriority" name="todoPriority" required></input>
+            </div>
+
+          <div class="form-group col-lg-12">
+            <input type="submit" class="btn col-lg-12">SUBMIT</input>
+          </div>
+      </form>
+        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="javascripts/delete.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+      <script>
+        $("#todoNew").validate();
+      </script>
+    	<hr>	
+
+      <div id="todoList">
+    <ul>
+
+    </ul>
+      </div>	
+      <br>
+
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>
